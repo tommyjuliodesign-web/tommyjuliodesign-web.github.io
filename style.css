@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
 
 :root {
   --paper: #f5f2eb;
@@ -1796,4 +1796,156 @@ button:focus-visible {
   .contact-link:hover {
     transform: none;
   }
+}
+/* ABOUT PORTRAIT — restrained editorial layout */
+.about-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(260px, 0.72fr);
+  grid-template-areas:
+    "eyebrow portrait"
+    "copy portrait";
+  column-gap: clamp(42px, 8vw, 112px);
+  align-items: center;
+}
+
+.about-section > .eyebrow {
+  grid-area: eyebrow;
+  align-self: end;
+  margin: 0 0 22px;
+}
+
+.about-copy {
+  grid-area: copy;
+  min-width: 0;
+  max-width: 700px;
+}
+
+.about-copy h2 {
+  max-width: 700px;
+  margin-top: 0;
+}
+
+.about-copy > p {
+  max-width: 590px;
+  margin: 30px 0 0;
+  color: #65655c;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.about-copy > p + p {
+  margin-top: 18px;
+}
+
+.about-portrait {
+  grid-area: portrait;
+  position: relative;
+  width: 100%;
+  max-width: 410px;
+  justify-self: end;
+  margin: 0;
+  padding: 10px;
+  background: rgba(245, 242, 235, 0.72);
+  border: 1px solid rgba(119, 123, 99, 0.24);
+  box-shadow: 0 24px 60px rgba(37, 37, 31, 0.09);
+  transform: rotate(1.1deg);
+}
+
+.about-portrait::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 18px -14px -14px 18px;
+  border: 1px solid rgba(119, 123, 99, 0.32);
+  pointer-events: none;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 0.84;
+  object-fit: cover;
+  object-position: center 24%;
+  background: #b8b7ba;
+  filter: saturate(0.94);
+}
+
+@media (max-width: 760px) {
+  .about-section {
+    grid-template-columns: minmax(0, 1fr) minmax(200px, 0.72fr);
+    column-gap: clamp(24px, 5vw, 42px);
+  }
+
+  .about-copy > p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .about-portrait {
+    padding: 7px;
+  }
+
+  .about-portrait::before {
+    inset: 14px -9px -9px 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-section {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "eyebrow"
+      "copy"
+      "portrait";
+    row-gap: 0;
+  }
+
+  .about-section > .eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .about-portrait {
+    width: min(82%, 360px);
+    margin: 36px auto 10px;
+    justify-self: center;
+    transform: rotate(0.6deg);
+  }
+
+  .about-portrait img {
+    aspect-ratio: 0.9;
+    object-position: center 22%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-portrait {
+    transform: none;
+  }
+}
+
+
+/* Optimized project previews: preserve the full screenshot and its headline. */
+.project-image {
+  aspect-ratio: 2.12 / 1;
+  min-height: 0;
+}
+
+.project-screenshot {
+  object-fit: contain;
+  object-position: center center;
+}
+
+.inline-icon {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 auto;
+  vertical-align: -0.2em;
+}
+
+.contact-link,
+.site-footer > a:not(.logo) {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
 }

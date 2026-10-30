@@ -5,22 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Tommy Julio — independent web designer and developer creating clean, responsive websites for founders, creators, and small businesses.">
   <meta name="theme-color" content="#f5f2eb">
-
-  <!-- Open Graph : aperçu lors du partage -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tommyjuliodesign-web.github.io/">
-  <meta property="og:site_name" content="Tommy Julio — Portfolio">
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://tommyjuliodesign-web.github.io/">
-
-  <title>Tommy Julio — Web Designer & Developer</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-  >
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tommyjuliodesign-web.github.io/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tommy Julio">
+  <meta property="og:title" content="Tommy Julio — Web Designer &amp; Developer">
+  <meta property="og:description" content="Clean, responsive websites for founders, creators, and small businesses.">
+  <meta property="og:url" content="https://tommyjuliodesign-web.github.io/">
+  <meta property="og:image" content="https://tommyjuliodesign-web.github.io/assets/images/atelier-noir.webp">
+  <meta property="og:image:alt" content="Preview of the ATELIER NOIR website concept">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fr_FR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tommy Julio — Web Designer &amp; Developer">
+  <meta name="twitter:description" content="Clean, responsive websites for founders, creators, and small businesses.">
+  <meta name="twitter:image" content="https://tommyjuliodesign-web.github.io/assets/images/atelier-noir.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet">
+  <title>Tommy Julio — Web Designer & Developer</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -50,7 +57,7 @@
     <section class="hero" id="home">
       <p class="eyebrow" data-i18n="heroEyebrow">INDEPENDENT WEB DESIGNER & DEVELOPER</p>
 
-      <h1 data-i18n="heroTitle">Websites designed to make<br><em>your business stand out.</em></h1>
+      <h1 data-i18n="heroTitle">Websites that look sharp.<br><em>Work smoothly. And make the next step clear.</em></h1>
 
       <p class="hero-description" data-i18n="heroDescription">
         I design and build clean, responsive websites that help small businesses and creators look professional, communicate clearly, and turn visitors into customers.
@@ -80,7 +87,8 @@
              aria-label="View ATELIER NOIR live demo">
             <img
               class="project-screenshot"
-              src="assets/images/atelier-noir.png"
+              src="assets/images/atelier-noir.webp"
+              width="1400" height="659" loading="lazy" decoding="async"
               alt="Preview of the ATELIER NOIR website"
             >
             <span class="project-number">01 / 03</span>
@@ -104,7 +112,8 @@
              aria-label="View Ironvault Fitness live demo">
             <img
               class="project-screenshot"
-              src="assets/images/ironvault-fitness.png"
+              src="assets/images/ironvault-fitness.webp"
+              width="1400" height="654" loading="lazy" decoding="async"
               alt="Preview of the Ironvault Fitness website"
             >
             <span class="project-number">02 / 03</span>
@@ -128,7 +137,8 @@
              aria-label="View AURELLE SKINCARE live demo">
             <img
               class="project-screenshot"
-              src="assets/images/aurelle-skincare.png"
+              src="assets/images/aurelle-skincare.webp"
+              width="1400" height="659" loading="lazy" decoding="async"
               alt="Preview of the AURELLE Skincare website"
             >
             <span class="project-number">03 / 03</span>
@@ -149,13 +159,18 @@
 
     <section class="about-section" id="about">
       <p class="eyebrow" data-i18n="aboutEyebrow">A LITTLE ABOUT ME</p>
-      <h2 data-i18n="aboutTitle">Good design does more than look good.</h2>
-      <p data-i18n="aboutDescription">
-        I’m Tommy Julio, an independent web designer and developer. I create clear, responsive websites that help businesses present their offer with confidence.
-      </p>
-      <p data-i18n="aboutDescription2">
-        I handle both the visual side and the front-end build, so your idea can move from concept to a working website without getting lost in translation.
-      </p>
+      <div class="about-copy">
+        <h2 data-i18n="aboutTitle">Good design does more than look good.</h2>
+        <p data-i18n="aboutDescription">
+          I’m Tommy Julio, an independent web designer and developer. I create clear, responsive websites that help businesses present their offer with confidence.
+        </p>
+        <p data-i18n="aboutDescription2">
+          I handle both the visual side and the front-end build, so your idea can move from concept to a working website without getting lost in translation.
+        </p>
+      </div>
+      <figure class="about-portrait">
+        <img src="assets/images/tommy-portrait.png" alt="Portrait of Tommy Julio" loading="lazy" decoding="async">
+      </figure>
     </section>
 
     <section class="services-section" id="services">
@@ -186,9 +201,9 @@
       <h2 data-i18n="contactTitle">Let’s build a website<br><em>that supports your next step.</em></h2>
       <p class="contact-lead" data-i18n="contactLead">Email me at</p>
       <a class="contact-link" href="mailto:tommyjulio.design@gmail.com">
-        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+        <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5.5h18v13H3z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
         tommyjulio.design@gmail.com
-        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
       </a>
       <p class="contact-note" data-i18n="contactNote">Tell me about your project, timeline, and what you want the website to achieve.</p>
     </section>
@@ -200,8 +215,8 @@
     <a href="https://github.com/tommyjuliodesign-web"
       target="_blank"
       rel="noopener noreferrer">
-      <i class="fa-brands fa-github" aria-hidden="true"></i>
-      GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+      <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.32-3.76-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.69.08-.69 1.12.08 1.71 1.15 1.71 1.15 1 .1.1.1.1 0 1.28 1.72 3.36 1.23 4.18.94.1-.73.4-1.23.72-1.51-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.23-5.1 5.51.4.35.76 1.02.76 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+      GitHub <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
     </a>
     <p>© <span id="current-year"></span> Tommy Julio</p>
   </footer>
